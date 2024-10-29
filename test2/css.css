@@ -1,0 +1,39 @@
+html, body {
+    margin: 0;
+  }
+  
+  html {
+    /* 设置字体为无衬线字体 */
+    font-family: sans-serif;
+    /* 设置高度为100% */
+    height: 100%;
+  }
+  
+  body {
+    overflow: hidden;
+    height: inherit;
+  }
+  
+  /* 设置标题字体大小为2rem */
+  h1 {
+    font-size: 3cap;
+    /* 设置字母间距为-1px */
+    letter-spacing: -1px;
+    /* 设置标题位置为绝对定位 */
+    position: absolute;
+    /* 设置标题的外边距为0 */
+   /* 设置外边距为0 */
+    margin: 0;
+    /* 设置顶部边距为-4px */
+    top: -4px;
+    /* 设置右边距为5px */
+    right: 5px;
+  }
+  p {
+    position: absolute;
+    margin: 0;
+    top: 35px;
+    right: 5px;
+    color: #aaa;
+  }
+  
