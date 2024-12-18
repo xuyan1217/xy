@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Treasure Hunt Animation</title>
+    <script src="script.js"></script>
+</head>
+<body>
+    <div id="game-content"></div>
+    <audio id="bg-music" loop>
+        <source src="backgroundmusic.mp3" type="audio/ogg">
+        <source src="backgroundmusic.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <div id="welcome" class="scene">
+        <div class="centered-text">
+            <h1 id="welcomeMessage">欢迎进入寻宝游戏</h1>
+            <button id="startGameButton">点击开始游戏</button>
+        </div>
+    </div>
+    <div id="library" class="scene" style="display: none;">
+        <div class="centered-text">
+            <h1>图书馆</h1>
+            <img src="library.jpg" alt="图书馆" class="scene-img centered">
+            <img src="scroll.jpg" alt="卷轴" class="scroll" onclick="startTreasureHunt()">
+            <p id="libraryMessage" class="message centered-text"></p>
+        </div>
+    </div>
+    <div id="temple" class="scene" style="display: none;">
+        <div class="centered-text">
+            <h1>神庙</h1>
+            <img src="temple.jpg" alt="神庙" class="scene-img centered">
+            <div id="templeResult" class="temple-result"></div>
+            <button id="continueButton">继续探索</button>
+        </div>
+    </div>
+    <div id="treasure" class="scene" style="display: none;">
+        <div class="centered-text">
+            <h1>宝藏</h1>
+            <img src="treasure.jpg" alt="宝藏" class="scene-img centered">
+            <p class="centered-text">恭喜！你找到了传说中的宝藏！</p>
+        </div>
+    </div>
+    <div id="guardPage" class="scene" style="display: none;">
+        <div class="centered-text">
+            <img src="guard.jpg" alt="守卫" class="guard-image centered">
+            <p id="guardMessage">糟糕，遇到守卫，寻宝失败。</p>
+        </div>
+    </div>
+    <button id="viewHistoryButton" style="display: none;">查看历史记录</button>
+
+    <!-- 历史记录显示区域 -->
+    <div id="gameHistory" style="display: none;">
+        <h2>游戏历史记录</h2>
+        <p id="gameHistoryContent"></p>
+    </div>
+    <script>
+        // 页面加载完毕后执行
+        window.onload = () => {
+            loadData();
+            restorePlayerInfo();
+            playBackgroundMusic();
+        };
+    </script>
+</body>
+</html>
